@@ -2,117 +2,297 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My GIS Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name - Remote Sensing & GIS Portfolio</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
   <style>
+    /* Basic reset and styling */
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
     }
     header {
-      background: url('https://github.com/edoardoforzano1/Portfolio/tree/609fc7105c745fa861f190eb9a1ca113081d841d/images') center/cover no-repeat;
+      background: #1f2937;
       color: white;
-      text-align: center;
-      padding: 120px 20px 50px;
-      position: relative;
+      padding: 20px 0;
     }
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-top: -75px;
-      background: white;
-    }
-    .intro {
-      margin: 20px auto;
-      max-width: 800px;
-      text-align: center;
-      font-size: 18px;
-    }
-    .projects {
+    header .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      padding: 40px 20px;
-      background: white;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0 0 0 10px;
+      font-weight: 300;
+      font-size: 1rem;
+      color: #ccc;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #3b82f6;
+    }
+    main {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+    }
+    .profile-photo {
+      max-width: 180px;
+      border-radius: 50%;
+      float: left;
+      margin-right: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 60px;
+      clear: both;
+    }
+    h2 {
+      color: #1f2937;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    /* Projects grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 20px;
     }
     .project-card {
-      background: #fff;
-      width: 300px;
-      margin: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .project-card:hover {
-      transform: scale(1.03);
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
     }
     .project-card img {
-      width: 100%;
-      height: 180px;
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
       object-fit: cover;
     }
     .project-card h3 {
-      margin: 10px;
+      margin: 0 0 10px 0;
+      color: #2563eb;
     }
     .project-card p {
-      padding: 0 15px 10px;
-      font-size: 14px;
+      flex-grow: 1;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
       color: #555;
     }
-    .project-card a {
+    .btn {
       display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background: #0077cc;
+      background: #3b82f6;
       color: white;
+      padding: 8px 15px;
+      border-radius: 4px;
       text-decoration: none;
-      border-radius: 5px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      margin-right: 8px;
+    }
+    .btn:hover {
+      background: #2563eb;
+    }
+    /* Skills */
+    .skills-list {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .skill-category {
+      background: white;
+      padding: 15px;
+      border-radius: 6px;
+      flex: 1 1 200px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+    .skill-category h3 {
+      margin-top: 0;
+      color: #2563eb;
+    }
+    .skill-category ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .skill-category ul li {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+    .skill-category ul li i {
+      margin-right: 8px;
+      color: #3b82f6;
+    }
+    /* Contact */
+    .contact-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .contact-btn {
+      background: #2563eb;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s ease;
+    }
+    .contact-btn:hover {
+      background: #1e40af;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background: #333;
+      background: #1f2937;
       color: white;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      header .container {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .profile-photo {
+        float: none;
+        margin: 0 auto 20px auto;
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="your-photo.jpg" alt="Your Photo" class="profile-img">
-    <h1>Your Name</h1>
-    <p>Remote Sensing & GIS Analyst | Urban Planner | Data Storyteller</p>
+    <div class="container">
+      <h1>Your Name</h1>
+      <p>Remote Sensing & GIS Analyst</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="assets/resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-
-  <section class="intro">
-    <p>
-      Welcome to my portfolio! I use GIS and remote sensing to solve environmental and urban challenges through spatial analysis and visualization. Below are some of the projects I’ve worked on—click to explore each.
-    </p>
-  </section>
-
-  <section class="projects">
-    <div class="project-card">
-      <img src="project1-thumb.jpg" alt="Project 1">
-      <h3>Urban Heat Mapping</h3>
-      <p>Using Landsat and Sentinel-2 data to map urban heat islands in growing cities.</p>
-      <a href="projects/project1.html" target="_blank">View Project</a>
-    </div>
-    <div class="project-card">
-      <img src="project2-thumb.jpg" alt="Project 2">
-      <h3>Mangrove Carbon Estimation</h3>
-      <p>Estimating total carbon stocks in coastal ecosystems using GEE and field data.</p>
-      <a href="projects/project2.html" target="_blank">View Project</a>
-    </div>
-    <!-- Add more project cards here -->
-  </section>
-
+  <main>
+    <section id="about">
+      <img
+        src="images/profile_photo.jpg"
+        alt="Your Name"
+        class="profile-photo"
+      />
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm Your Name, a passionate Remote Sensing and GIS professional with X years of experience in geospatial analysis, environmental monitoring, and spatial data science. I specialize in ArcGIS, QGIS, Python, and Google Earth Engine.
+      </p>
+      <p>
+        I love using geospatial data to solve real-world challenges related to sustainability and urban planning.
+      </p>
+    </section>
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Project 1 Title</h3>
+          <img src="images/project1.jpg" alt="Project 1" />
+          <p>
+            Brief description of project 1. Highlight your contribution and outcomes.
+          </p>
+          <a href="projects/project1.html" class="btn">View Details</a>
+          <a href="https://example.com/report1" target="_blank" class="btn">Report <i class="fas fa-link"></i></a>
+        </div>
+        <div class="project-card">
+          <h3>Project 2 Title</h3>
+          <img src="images/project2.jpg" alt="Project 2" />
+          <p>
+            Brief description of project 2. Highlight key achievements or impacts.
+          </p>
+          <a href="projects/project2.html" class="btn">View Details</a>
+          <a href="https://example.com/report2" target="_blank" class="btn">Report <i class="fas fa-link"></i></a>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill-category">
+          <h3>GIS Software</h3>
+          <ul>
+            <li><i class="fas fa-map-marked-alt"></i> ArcGIS Pro/Desktop</li>
+            <li><i class="fas fa-globe-americas"></i> QGIS</li>
+            <li><i class="fas fa-cloud"></i> Google Earth Engine</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Programming</h3>
+          <ul>
+            <li><i class="fab fa-python"></i> Python (GDAL, Rasterio, Geopandas)</li>
+            <li><i class="fab fa-js"></i> JavaScript (Leaflet, OpenLayers)</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Geospatial Concepts</h3>
+          <ul>
+            <li><i class="fas fa-satellite-dish"></i> Remote Sensing</li>
+            <li><i class="fas fa-layer-group"></i> Spatial Analysis</li>
+            <li><i class="fas fa-map"></i> Cartography</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Feel free to get in touch!</p>
+      <div class="contact-links">
+        <a href="mailto:your.email@example.com" class="contact-btn"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank" class="contact-btn"
+          ><i class="fab fa-linkedin"></i> LinkedIn</a
+        >
+        <a href="https://github.com/your-username" target="_blank" class="contact-btn"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+      </div>
+    </section>
+  </main>
   <footer>
-    &copy; 2025 Your Name | <a href="mailto:you@example.com" style="color:white;">Contact</a>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
   </footer>
 </body>
 </html>
+
