@@ -1,97 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Edoardo Forzano - GIS Portfolio</title>
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edoardo Forzano - GIS Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-  /* Header with big background */
-  header {
-    position: relative;
-    background: url('https://raw.githubusercontent.com/edoardoforzano1/Portfolio/main/images/Immagine%202025-07-31%20105513.png') center center/cover no-repeat;
-    height: 400px;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding-left: 180px; /* space for profile picture */
-  }
+    header {
+      background: url('background: url("https://raw.githubusercontent.com/edoardoforzano1/Portfolio/3dd3d8acd7308a12a3da7e983727c59bd987aedd/images/header.png");
+      center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px 50px;
+      position: relative;
+    }
 
-  /* Profile picture on left, bigger */
-  .profile-picture {
-    position: absolute;
-    left: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 5px solid white;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    background-color: white;
-  }
+    .profile-picture {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid white;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
 
-  header h1 {
-    margin: 0 0 10px 0;
-    font-size: 3em;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  }
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
 
-  header p {
-    margin: 0;
-    font-size: 1.4em;
-    font-weight: 500;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  }
+    p.subtitle {
+      margin-top: 10px;
+      font-size: 20px;
+    }
 
-  /* Content below header */
-  main {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
-  }
+    .content {
+      padding: 30px;
+    }
 
-  .project-card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
+    .project {
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-  .project-card h2 {
-    margin-top: 0;
-  }
-</style>
+    .project h2 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <img class="profile-picture" src="https://raw.githubusercontent.com/edoardoforzano1/Portfolio/main/images/profile_picture.png" alt="Edoardo Forzano">
-  <div>
-    <h1>Edoardo Forzano</h1>
-    <p>GIS Analyst | Remote Sensing | Urban Planning</p>
-  </div>
-</header>
+  <!-- Profile picture -->
+  <img class="profile-picture" src="images/profile_picture.png" alt="Profile picture">
 
-<main>
-  <div class="project-card">
-    <h2>Project Title 1</h2>
-    <p>Description of the project and tools used (e.g., ArcGIS Pro, Python, Google Earth Engine).</p>
+  <!-- Header with background -->
+  <header>
+    <h1>Edoardo Forzano</h1>
+    <p class="subtitle">GIS Analyst | Remote Sensing | Urban Planning</p>
+  </header>
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="project">
+      <h2>Project Title 1</h2>
+      <p>Description of the project and tools used (e.g., ArcGIS Pro, Python, Google Earth Engine).</p>
+    </div>
+    <div class="project">
+      <h2>Project Title 2</h2>
+      <p>Description of another project. Highlight your role and outcomes.</p>
+    </div>
+    <!-- Add more projects as needed -->
   </div>
-  <div class="project-card">
-    <h2>Project Title 2</h2>
-    <p>Description of another project. Highlight your role and outcomes.</p>
-  </div>
-</main>
 
 </body>
 </html>
-
 
